@@ -2,12 +2,15 @@ using System;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
+
 
 namespace SimpleMDB
 {
     public class App
     {
         private HttpListener server;
+        private HttpRouter router;
 
         public App()
         {
@@ -15,6 +18,11 @@ namespace SimpleMDB
             server = new HttpListener();
             server.Prefixes.Add(host);
             Console.WriteLine("Server listening on... " + host);
+
+            var authController = new AuthController();
+            router = new HttpRouter();
+
+            router.AddGet("/", authController.LandingPageAGet);
         }
 
         public async Task Start()
@@ -37,18 +45,9 @@ namespace SimpleMDB
         {
             var req = ctx.Request;
             var res = ctx.Response;
+            var options = new Hashtable();
 
-            if (req.HttpMethod == "GET" && req.Url.AbsolutePath == "/")
-            {
-                string html = "Hello!";
-                byte[] content = Encoding.UTF8.GetBytes(html);
-                res.StatusCode = (int)HttpStatusCode.OK;
-                res.ContentEncoding = Encoding.UTF8;
-                res.ContentType = "text/plain";
-                res.ContentLength64 = content.LongLength;
-                await res.OutputStream.WriteAsync(content, 0, content.Length);
-                res.Close();
-            }
+            await router.Handle(req, res, options);
         }
     }
 }
