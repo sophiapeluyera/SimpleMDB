@@ -14,14 +14,8 @@ namespace SimpleMDB
 
         public async Task LandingPageAGet(HttpListenerRequest req, HttpListenerResponse res, Hashtable options)
         {
-            string html = HtmlTemplates.Base("SimpleMDB", "Landing Page", "Hello World!");
-            byte[] content = Encoding.UTF8.GetBytes(html);
-            res.StatusCode = (int)HttpStatusCode.OK;
-            res.ContentEncoding = Encoding.UTF8;
-            res.ContentType = "text/html";
-            res.ContentLength64 = content.LongLength;
-            await res.OutputStream.WriteAsync(content, 0, content.Length);
-            res.Close();
+            string html = HtmlTemplates.Base("SimpleMDB", "Landing Page", "Hello World!2");
+            await HttpUtils.Respond(req, res, options, (int) HttpStatusCode.OK, html);
         }
     }
 }
