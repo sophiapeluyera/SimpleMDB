@@ -19,10 +19,16 @@ namespace SimpleMDB
             server.Prefixes.Add(host);
             Console.WriteLine("Server listening on... " + host);
 
-            var authController = new AuthController();
+
+            var userRepository = new MockUserRepository();
+            var userService = new MockUserService(userRepository);
+            var userController = new UserController(userService);
+            var authController = new AuthController(userService);
+            
             router = new HttpRouter();
 
             router.AddGet("/", authController.LandingPageAGet);
+            router.AddGet("/users", userController.ViewAllGet);
         }
 
         public async Task Start()
