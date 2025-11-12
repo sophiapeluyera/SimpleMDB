@@ -1,0 +1,449 @@
+/* General body styling */
+body {
+    color: #fff0f5;
+    background: linear-gradient(135deg, #ff69b4, #ffc0cb);
+    font-family: 'Barbie', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ff1493, #ff69b4);
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    height: 60px;
+    border-bottom: 2px solid #fff0f5;
+}
+
+.navbar a,
+.navbar button {
+    padding: 10px 18px;
+    background: linear-gradient(to bottom, #ff69b4, #ff1493);
+    color: #ffffff;
+    border: 2px solid #fff0f5;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(255, 182, 193, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar button:hover {
+    background: #fff0f5;
+    color: #ff1493;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.7);
+}
+/* Header */
+.header {
+    margin-top: 80px; /* Extra space for fabulous navbar */
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    margin: 50px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #ff69b4, #ffc0cb);
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+    border: 2px dashed #fff0f5;
+    animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-family: 'Barbie', cursive;
+    text-shadow: 2px 2px #ff1493;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.movie-icons {
+    font-size: 3.5em;
+    color: #ff1493;
+    text-shadow: 1px 1px #fff;
+}
+
+/* Main navigation */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a,
+.main-nav button {
+    padding: 12px 24px;
+    background: linear-gradient(to bottom, #ff69b4, #ff1493);
+    color: #fff;
+    border: 2px solid #fff0f5;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(255, 182, 193, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.main-nav a:hover,
+.main-nav button:hover {
+    background: #fff0f5;
+    color: #ff1493;
+    transform: scale(1.1);
+    box-shadow: 0 5px 12px rgba(255, 105, 180, 0.7);
+}
+/* Login hero section */
+.login-hero {
+    text-align: center;
+    margin: 30px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #ff69b4, #ffc0cb);
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+    max-width: 420px;
+    border: 2px solid #fff0f5;
+    font-family: 'Barbie', cursive;
+    animation: pulseGlow 2s infinite;
+}
+
+.login-hero h2 {
+    font-size: 2em;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px #ff1493;
+}
+
+.login-hero p {
+    font-size: 1.1em;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Register hero section */
+.register-hero {
+    text-align: center;
+    margin: 30px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+    max-width: 420px;
+    border: 2px solid #fff0f5;
+    font-family: 'Barbie', cursive;
+    animation: pulseGlow 2s infinite;
+}
+
+.register-hero h2 {
+    font-size: 2em;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px #ff1493;
+}
+
+.register-hero p {
+    font-size: 1.1em;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Featured section */
+.featured {
+    margin: 50px 0;
+    text-align: center;
+    font-family: 'Barbie', cursive;
+    color: #ff1493;
+    font-size: 1.5em;
+    text-shadow: 1px 1px #fff;
+}
+
+.featured h3 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #ff1493;
+    text-shadow: 1px 1px #fff0f5;
+}
+
+/* Card container */
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Individual card styling */
+.card {
+    background: linear-gradient(145deg, #ffc0cb, #ff69b4);
+    border: 2px solid #fff0f5;
+    border-radius: 20px;
+    padding: 25px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+}
+
+.card h4 {
+    color: #ff1493;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    text-shadow: 1px 1px #fff;
+}
+
+.card p {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.card a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(to right, #ff69b4, #ff1493);
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(255, 182, 193, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.card a:hover {
+    background: #fff0f5;
+    color: #ff1493;
+    transform: scale(1.05);
+}
+
+/* Glow animation */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+}
+/* Global link styling */
+a {
+    color: #ff1493;
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 2px solid #ff1493;
+    border-radius: 25px;
+    margin: 6px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    color: #fff;
+    border-color: #fff0f5;
+    background-color: #ff69b4;
+    outline: none;
+    transform: scale(1.05);
+}
+
+a:focus {
+    outline: 3px solid #fff0f5;
+    outline-offset: 3px;
+}
+
+/* Glam Tables */
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+    width: 85%;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(90deg, #ff69b4, #ffc0cb);
+    color: #fff;
+    font-size: 1.1em;
+    padding: 14px;
+    text-shadow: 1px 1px #ff1493;
+}
+
+td {
+    border: 1px solid #fff0f5;
+    padding: 14px;
+    color: #fff;
+    background-color: #2a2a2a;
+    transition: background-color 0.3s ease;
+}
+
+tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+tr:hover {
+    background-color: #ff1493;
+    color: #fff;
+    transform: scale(1.01);
+}
+
+/* Glam Form Container */
+form {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(135deg, #ffc0cb, #ff69b4);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+    margin: 30px auto;
+    width: 65%;
+    font-family: 'Segoe UI', sans-serif;
+    border: 2px solid #fff0f5;
+}
+
+form label {
+    text-align: right;
+    color: #ff1493;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 1px 1px #fff;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #fff0f5;
+    width: 100%;
+    font-size: 1em;
+    background-color: #fff0f5;
+    color: #ff1493;
+    box-shadow: 0 2px 6px rgba(255, 182, 193, 0.4);
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 3px solid #ff1493;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+}
+
+/* Glam Buttons */
+button {
+    grid-column: span 2;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #ff69b4, #ff1493);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.5);
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(255, 105, 180, 0.7);
+    background: #fff0f5;
+    color: #ff1493;
+    outline: none;
+}
+
+button:focus {
+    outline: 3px solid #fff0f5;
+    outline-offset: 3px;
+}
+/* Logout/remove buttons overrides (Barbiecore edition) */
+button.logout {
+    grid-column: auto;
+    width: auto;
+    padding: 10px 18px;
+    min-width: 100px;
+    white-space: nowrap;
+    background: transparent;
+    border: 2px solid #ff1493;
+    color: #ff1493;
+    font-weight: bold;
+    border-radius: 30px;
+    margin: 8px auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    font-family: 'Barbie', cursive;
+    box-shadow: 0 2px 6px rgba(255, 105, 180, 0.4);
+}
+
+button.logout:hover,
+button.logout:focus {
+    background-color: #fff0f5;
+    color: #ff1493;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.6);
+    outline: none;
+}
+
+button.logout:focus {
+    outline: 3px solid #fff0f5;
+    outline-offset: 3px;
+}
+
