@@ -1,0 +1,42 @@
+### Get paged list of movies
+GET http://localhost:8080/api/v1/movies?page=1&size=10
+Accept: application/json
+
+###
+
+### Create a new movie
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": -1,
+  "title": "Inception",
+  "year": 2010,
+  "description": "A skilled thief who enters dreams to steal secrets."
+}
+
+###
+
+### Get a single movie by ID
+GET http://localhost:8080/api/v1/movies/1
+Accept: application/json
+
+###
+
+### Update a movie by ID
+PUT http://localhost:8080/api/v1/movies/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Joker 2",
+  "year": 2020,
+  "description": "A man that is a joke."
+}
+
+###
+
+### Delete a movie by ID
+DELETE http://localhost:8080/api/v1/movies/1
+Accept: application/json
