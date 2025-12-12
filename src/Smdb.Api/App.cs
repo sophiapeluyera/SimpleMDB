@@ -19,6 +19,8 @@ public class App : HttpServer
         router.Use(HttpUtils.StructuredLogging); 
         router.Use(HttpUtils.CentralizedErrorHandling); 
         router.Use(HttpUtils.AddResponseCorsHeaders); 
+        // serve static files from configured wwwroot.dir
+        router.Use(HttpUtils.ServeStaticFiles);
         router.Use(HttpUtils.DefaultResponse); 
         router.Use(HttpUtils.ParseRequestUrl); 
         router.Use(HttpUtils.ParseRequestQueryString); 
